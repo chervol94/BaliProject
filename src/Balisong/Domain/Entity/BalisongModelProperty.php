@@ -6,6 +6,7 @@ namespace Src\Balisong\Domain\Entity;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class BalisongModelProperty extends Model
@@ -39,6 +40,12 @@ class BalisongModelProperty extends Model
     {
         return $this->hasOne(BalisongModelPropertyBladeShape::class, 'balisong_model_property_blade_shape_id', 'extra_blade_shape');
     }
+
+    public function balisongModelPropertyColor(): HasMany
+    {
+        return $this->hasMany(BalisongModelPropertyColor::class, 'balisong_model_property_color_id', 'balisong_model_property_id');
+    }
+
 
     //end relations
 
