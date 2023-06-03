@@ -1,6 +1,6 @@
 <?php
 
-namespace Src\Balisong\Domain\Exception;
+namespace Src\Shared\Domain\Exception;
 
 use DomainException;
 

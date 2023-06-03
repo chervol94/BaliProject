@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Src\Infrastructure\Repository;
+namespace Src\Balisong\Model\Infrastructure\Repository;
 
-use Src\Balisong\Domain\Entity\BalisongModel;
+use Src\Balisong\Model\Domain\Entity\BalisongModel;
 use Src\Balisong\Domain\Exception\DataNotFoundException;
 
 class BalisongModelRepository

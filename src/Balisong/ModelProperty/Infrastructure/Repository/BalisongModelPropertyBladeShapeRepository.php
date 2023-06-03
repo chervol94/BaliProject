@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Src\Infrastructure\Repository;
+namespace Src\Balisong\ModelProperty\Infrastructure\Repository;
 
-use Src\Balisong\Domain\Entity\BalisongModelPropertyBladeShape;
-use Src\Balisong\Domain\Exception\DataNotFoundException;
+use Src\Shared\Domain\Exception\DataNotFoundException;
+use Src\Balisong\ModelProperty\Domain\Entity\BalisongModelPropertyBladeShape;
 
 class BalisongModelPropertyBladeShapeRepository
 {

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Src\Infrastructure\Repository;
+namespace Src\Balisong\Brand\Infrastructure\Repository;
 
-use Src\Balisong\Domain\Entity\BalisongBrand;
+use Src\Balisong\Brand\Domain\Entity\BalisongBrand;
 use Src\Balisong\Domain\Exception\DataNotFoundException;
 
 class BalisongBrandRepository

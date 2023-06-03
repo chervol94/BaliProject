@@ -2,12 +2,14 @@
 
 declare (strict_types=1);
 
-namespace Src\Balisong\Domain\Entity;
+namespace Src\Balisong\Brand\Domain\Entity;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Src\Balisong\Model\Domain\Entity\BalisongModel;
 
 class BalisongBrand extends Model
 {

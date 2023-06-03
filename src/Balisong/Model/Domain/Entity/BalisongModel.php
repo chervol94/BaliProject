@@ -2,27 +2,38 @@
 
 declare (strict_types=1);
 
-namespace Src\Balisong\Domain\Entity;
+namespace Src\Balisong\Model\Domain\Entity;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Src\Balisong\Brand\Domain\Entity\BalisongBrand;
 
 class BalisongModel extends Model
 {
-    protected $table = 'balisong_model_property_color';
-    protected $primaryKey = 'balisong_model_property_color_id';
+    protected $table = 'balisong_model';
+    protected $primaryKey = 'balisong_model_id';
 
     //start relations
 
-    public function balisongModelProperty(): HasOne
+    public function balisongBrand(): HasOne
     {
-        return $this->hasOne(BalisongModelProperty::class, 'balisong_model_property_id', 'model_property_id');
+        return $this->hasOne(BalisongBrand::class, 'brand_id', 'brand_id');
     }
 
-    public function balisongBrandObj(): ?BalisongModelProperty
+    public function balisongBrandObj(): ?BalisongBrand
     {
-        return $this->getRelationValue('balisongModelProperty');
+        return $this->getRelationValue('balisongBrand');
+    }
+
+    public function balisongModelClones(): HasOne
+    {
+        return $this->hasOne(self::class, 'balisong_model_id', 'balisong_model_id');
+    }
+
+    public function balisongModelProperty(): HasOne
+    {
+        return $this->hasOne(BalisongModelProperty::class, 'balisong_model_property_id', 'balisong_model_property_id');
     }
 
     //end relations
@@ -31,12 +42,12 @@ class BalisongModel extends Model
 
     public function id(): ?int
     {
-        return $this->getAttributeValue('balisong_model_property_color_id');
+        return $this->getAttributeValue('balisong_id');
     }
 
-    public function setId(int $id): self
+    public function setId(int $balisongId): self
     {
-        return $this->setAttribute('balisong_model_property_color_id', $id);
+        return $this->setAttribute('balisong_id', $balisongId);
     }
 
     public function name(): ?string
