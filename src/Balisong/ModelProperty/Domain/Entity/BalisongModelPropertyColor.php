@@ -4,12 +4,12 @@ declare (strict_types=1);
 
 namespace Src\Balisong\ModelProperty\Domain\Entity;
 
+use Src\Balisong\ModelProperty\Domain\Entity\BalisongModelProperty;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
-use Src\Balisong\ModelProperty\Domain\Entity\BalisongModelProperty;
 
-class BalisongModel extends Model
+class BalisongModelPropertyColor extends Model
 {
     protected $table = 'balisong_model_property_color';
     protected $primaryKey = 'balisong_model_property_color_id';

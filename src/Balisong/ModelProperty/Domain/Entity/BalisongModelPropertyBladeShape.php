@@ -4,11 +4,11 @@ declare (strict_types=1);
 
 namespace Src\Balisong\ModelProperty\Domain\Entity;
 
+use Src\Balisong\ModelProperty\Domain\Entity\BalisongModelProperty;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Src\Balisong\ModelProperty\Domain\Entity\BalisongModelProperty;
 
 class BalisongModelPropertyBladeShape extends Model
 {

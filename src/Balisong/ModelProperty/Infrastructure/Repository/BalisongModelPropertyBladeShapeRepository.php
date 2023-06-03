@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 declare(strict_types=1);
 
@@ -11,7 +11,8 @@ class BalisongModelPropertyBladeShapeRepository
 {
 
     public function __construct()
-    {}
+    {
+    }
 
     public function find(int $id, array $relations = []): ?BalisongModelPropertyBladeShape
     {
@@ -28,7 +29,7 @@ class BalisongModelPropertyBladeShapeRepository
         //->get()
         ->first();
 
-        if ($balisongModelPropertyBladeShape == null){
+        if ($balisongModelPropertyBladeShape == null) {
             throw new DataNotFoundException('Balisong Blade Shape not Found');
         }
 
@@ -42,6 +43,5 @@ class BalisongModelPropertyBladeShapeRepository
         //disptach events that notify the creation or update of a new Balisong Model entity
 
         return $balisongModelPropertyBladeShape;
-    } 
-
+    }
 }

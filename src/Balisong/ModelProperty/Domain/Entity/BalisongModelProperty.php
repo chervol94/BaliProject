@@ -4,6 +4,9 @@ declare (strict_types=1);
 
 namespace Src\Balisong\ModelProperty\Domain\Entity;
 
+use Src\Balisong\ModelProperty\Domain\Entity\BalisongModelPropertyColor;
+use Src\Balisong\ModelProperty\Domain\Entity\BalisongModelPropertyBladeShape;
+use Src\Balisong\ModelProperty\Domain\Entity\BalisongModelPropertyConstruction;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
