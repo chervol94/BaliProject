@@ -1,5 +1,6 @@
 <?php
 
+use Apps\Shared\Controller\DummyController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,5 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('dummy', DummyController::class);
 
 //Route::post('/api/create-balisong-model', CreateBalisongModelController::class);
