@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 declare(strict_types=1);
 
@@ -11,7 +11,8 @@ class BalisongModelRepository
 {
 
     public function __construct()
-    {}
+    {
+    }
 
     public function find(int $balisongId, array $relations = []): ?BalisongModel
     {
@@ -28,7 +29,7 @@ class BalisongModelRepository
         //->get()
         ->first();
 
-        if ($balisong == null){
+        if ($balisong == null) {
             throw new DataNotFoundException('Balisong not Found');
         }
 
@@ -42,6 +43,5 @@ class BalisongModelRepository
         //disptach events that notify the creation or update of a new Balisong Model entity
 
         return $balisong;
-    } 
-
+    }
 }

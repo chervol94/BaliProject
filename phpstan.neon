@@ -1,0 +1,11 @@
+includes:
+    - vendor/phpstan/phpstan/extension.neon
+
+parameters:
+
+    paths:
+        - apps/
+        - src/
+        - tests/
+        
+    level: 9

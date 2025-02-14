@@ -7,10 +7,9 @@ namespace Apps\Shared\Controller;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
 
-class DummyController extends Controller 
+class DummyController extends Controller
 {
-    public function __invoke(
-    ): JsonResponse
+    public function __invoke(): JsonResponse
     {
         return new JsonResponse(
             [
@@ -18,5 +17,4 @@ class DummyController extends Controller
             ]
         );
     }
-
 }
